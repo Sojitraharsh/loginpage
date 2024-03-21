@@ -92,29 +92,35 @@
     }
   
 
-
-  let users = [
+const users = [
     { username: 'user1', password: 'password1' },
     { username: 'user2', password: 'password2' },
-    { username: 'user3', password: 'password3' }
+    { username: 'user3', password: 'password3' },
+    { username: 'mm', password: 'mm' },
+    { username: '123', password: '123' },
+  
   ];
 
   
   function validateLogin(username, password) {
-
+    
     const user = users.find(u => u.username === username && u.password === password);
     
     if (user) {
-    
+      alert('Login successful!');
       window.location.href = 'welcome.html';
     } else {
-      alert('Invalid username or password. Please try again.');
-    }
+      alert('Invalid username or password. Please try again.'); 
   }
-
-  function re(){
-    alert('Registration successful! Please proceed to login.')
   }
+  document.getElementById('login').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    
+    validateLogin(username, password);
+  });
     </script>
 
   </body>
