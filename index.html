@@ -66,7 +66,7 @@
             required
           />
           <input type="checkbox" class="checkbox"><span>Terms Accept to thr terms & condittions</span>
-          <button onclick="re" type="submit" class="submit">Register</button>
+          <button onclick="re()" type="submit" class="submit">Register</button>
         </form>
 
 
@@ -120,6 +120,11 @@ const users = [
     
     validateLogin(username, password);
   });
+      
+  function re(){
+    alert('Successfully Registered!');
+    } 
+    
     </script>
 
   </body>
