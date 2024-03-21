@@ -14,7 +14,7 @@
           <div id="btn"></div>
 
           <button type="button" class="toggle-btn" onclick="login()">Login</button>
-          <button type="button" class="toggle-btn" onclick="register()">Regiser</button>
+          <button type="button" class="toggle-btn" onclick="register()">Register</button>
         </div>
 
         <div class="social-midea">
@@ -107,7 +107,6 @@ const users = [
     const user = users.find(u => u.username === username && u.password === password);
     
     if (user) {
-      alert('Login successful!');
       window.location.href = 'welcome.html';
     } else {
       alert('Invalid username or password. Please try again.'); 
